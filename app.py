@@ -21,11 +21,6 @@ def gethz():
 @app.route('/healthz', methods=['GET'])
 def get():
     """health check"""
-    
-    # NO verification
-    # return "OK", 200
-
-    # WITH verification
     if get_status_code(URL) == 200:
         return Response("ok", status = 200)
 
