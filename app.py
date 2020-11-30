@@ -8,11 +8,15 @@ from checkStatus import get_status_code
 
 app = Flask(__name__)
 
-URL = "http://localhost:5000"
+URL = "http://localhost:8000"
 
 @app.route('/', methods=['GET'])
 def home():
     return "hello world\n"
+
+@app.route('/hz', methods=['GET'])
+def gethz():
+    return "OK", 200
 
 @app.route('/healthz', methods=['GET'])
 def get():
